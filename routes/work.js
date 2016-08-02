@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.put('/:id', function(req, res, next) {
-  return knex('work')update(req.body).where('id', req.params.id).then(function(data) {
+  return knex('work').update(req.body).where('id', req.params.id).then(function(data) {
   res.json({success: "post edited"});
   })
 });
